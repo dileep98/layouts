@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "Layout Management API",
+    "description": "API for managing layouts for users and groups.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Layouts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Assign Layout to User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts/assign/user?userId=1&layoutId=2",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts",
+            "assign",
+            "user"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1",
+              "description": "User ID"
+            },
+            {
+              "key": "layoutId",
+              "value": "2",
+              "description": "Layout ID"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Assign Layout to Group",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts/assign/group?groupId=1&layoutId=2",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts",
+            "assign",
+            "group"
+          ],
+          "query": [
+            {
+              "key": "groupId",
+              "value": "1",
+              "description": "Group ID"
+            },
+            {
+              "key": "layoutId",
+              "value": "2",
+              "description": "Layout ID"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update User Layout",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts/update/user?userId=1&layoutId=3",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts",
+            "update",
+            "user"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1",
+              "description": "User ID"
+            },
+            {
+              "key": "layoutId",
+              "value": "3",
+              "description": "Layout ID"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get User Layout",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts/user/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts",
+            "user",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Group Layout",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/layouts/group/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "layouts",
+            "group",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
